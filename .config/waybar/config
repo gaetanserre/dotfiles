@@ -1,0 +1,75 @@
+{
+  "layer": "top",
+  "height": 45,
+  "margin-right": 7,
+
+  "modules-left": ["custom/launcher", "cpu", "memory", "disk", "tray"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["custom/updates", "backlight", "pulseaudio", "clock", "battery"],
+
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "{icon} Muted",
+    "format-icons" : {
+      "default": ["", "", ""]
+    }
+  },
+
+  "disk": {
+    "interval": 60,
+    "format": "󰋊 {free} / {total} ({percentage_free}%)",
+    "path": "/"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󱐌",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "clock": {
+    "interval": 1,
+    "timezone": "Europe/Paris",
+    "format": " {:%H:%M   %d/%m}"
+  },
+
+  "cpu": {
+    "interval": 15,
+    "format": "  {}%",
+    "max-length": 10
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "  {}%",
+    "max-length": 10
+  },
+
+  "custom/updates": {
+    "format": "{} update(s)",
+    "exec": "dnf check-update | grep updates | wc -l",
+    "interval": 15
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi",
+    "on-click-right": "killall wofi",
+    "class": "memory"
+  }
+}

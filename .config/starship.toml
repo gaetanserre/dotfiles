@@ -1,0 +1,50 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$conda\
+$cmd_duration\
+$line_break\
+$shell\
+$character"""
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[ ∃](bold #40a02b)'
+error_symbol   = '[ ∃](bold #d20f39)'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[directory]
+style = "bold fg:#ffffff bg:#8839ef"
+truncation_length = 3
+format = "[](#8839ef)[ $path]($style)[](#8839ef) "
+truncation_symbol = "…/"
+
+[git_branch]
+style = "bold fg:#ffffff bg:#209fb5"
+format = "[](#209fb5)[$symbol$branch(:$remote_branch)]($style)[](#209fb5) "
+
+[git_state]
+style = "bold fg:#ffffff bg:#df8e1d"
+format = '[](#df8e1d)\([$state( $progress_current/$progress_total)]($style)\)[](#df8e1d) '
+
+[git_status]
+style = "bold fg:#ffffff bg:#d20f39"
+format = '[](#d20f39)([\[$all_status$ahead_behind\]]($style))[](#d20f39) '
+
+[conda]
+symbol = "󱔎 "
+style = "bold fg:#ffffff bg:#ffdd54"
+format = "[](#ffdd54)[$symbol$environment]($style)[](#ffdd54) "
+
+[cmd_duration]
+style = "bold fg:#ffffff bg:#ffdd54"
+format = "[](#ffdd54)[$duration]($style)[](#ffdd54) "

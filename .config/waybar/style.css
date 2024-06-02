@@ -1,0 +1,254 @@
+@import "latte.css";
+
+* {
+  border: none;
+  border-radius: 10px;
+  font-family: "FiraCode Nerd Font Mono";
+  font-size: 11px;
+  min-height: 10px;
+}
+
+window.DP-4 * {
+  font-size: 15px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  margin-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+#workspaces {
+  margin-top: 6px;
+  margin-left: 12px;
+  margin-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 4px;
+  background: @mantle;
+  transition: none;
+}
+
+#workspaces button {
+  transition: none;
+  color: @teal;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+#workspaces button.urgent {
+  transition: none;
+  color: @red;
+  background: transparent;
+  font-size: 4px;
+}
+
+
+#workspaces button.focused {
+  color: #d3506f;
+  font-weight: bold;
+  /* border-bottom: 2px solid @green; */
+}
+
+#workspaces button.active {
+  color: #d3506f;
+  font-weight: bold;
+  /* border-bottom: 2px solid @green; */
+}
+
+
+#workspaces button:hover {
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: @mauve;
+  font-weight: bold;
+  /* border-color: @maroon; */
+}
+
+/* #worspaces button.focused:hover {
+  color: @maroon;
+} */
+
+#disk {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @lavender;
+}
+
+#network {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @mauve;
+}
+
+#pulseaudio {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @yellow;
+}
+
+#battery {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @sky;
+}
+
+#battery.charging, #battery.plugged {
+  color: @mantle;
+  background-color: @sky;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @sky;
+  color: @mantle;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: @red;
+    color: @sky;
+  }
+}
+
+#backlight {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @peach;
+}
+
+#clock {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @green;
+}
+
+#memory {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @mauve;
+}
+
+#cpu {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @sapphire;
+}
+
+#tray {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @sky;
+  background: @mantle;
+}
+
+#custom-launcher {
+  font-size: 24px;
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 10px;
+  transition: none;
+  color: #d3506f;
+  background: @mantle;
+}
+
+#custom-power {
+  font-size: 20px;
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @red;
+}
+
+#custom-updates {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @pink;
+}
+
