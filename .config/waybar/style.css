@@ -124,21 +124,31 @@ window#waybar.hidden {
   margin-left: 8px;
   margin-bottom: 3px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 13px;
   border-radius: 10px;
   transition: none;
   color: @mantle;
   background: @sky;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging {
+  color: @yellow;
+  background-color: @sky;
+}
+
+#battery.plugged {
   color: @mantle;
   background-color: @sky;
 }
 
+#battery.warning:not(.charging) {
+  background-color: @sky;
+  color: @peach;
+}
+
 #battery.critical:not(.charging) {
   background-color: @sky;
-  color: @mantle;
+  color: @red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -148,8 +158,8 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: @red;
-    color: @sky;
+    background-color: @sky;
+    color: @mantle;
   }
 }
 

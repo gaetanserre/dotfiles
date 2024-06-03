@@ -19,7 +19,7 @@
 
   "disk": {
     "interval": 60,
-    "format": "󰋊 {free} / {total} ({percentage_free}%)",
+    "format": "󰋊 {free} ({percentage_free}%)",
     "path": "/"
   },
 
@@ -37,9 +37,13 @@
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󱐌",
-    "format-plugged": "{capacity}% ",
+    "format-plugged": "",
     "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
   },
 
   "clock": {
