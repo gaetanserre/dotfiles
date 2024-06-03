@@ -79,10 +79,6 @@ window#waybar.hidden {
   /* border-color: @maroon; */
 }
 
-/* #worspaces button.focused:hover {
-  color: @maroon;
-} */
-
 #disk {
   margin-top: 6px;
   margin-left: 8px;
@@ -124,31 +120,21 @@ window#waybar.hidden {
   margin-left: 8px;
   margin-bottom: 3px;
   padding-left: 10px;
-  padding-right: 13px;
+  padding-right: 10px;
   border-radius: 10px;
   transition: none;
   color: @mantle;
   background: @sky;
 }
 
-#battery.charging {
-  color: @yellow;
-  background-color: @sky;
-}
-
-#battery.plugged {
+#battery.charging, #battery.plugged {
   color: @mantle;
   background-color: @sky;
 }
 
-#battery.warning:not(.charging) {
-  background-color: @sky;
-  color: @peach;
-}
-
 #battery.critical:not(.charging) {
   background-color: @sky;
-  color: @red;
+  color: @mantle;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -158,8 +144,8 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: @sky;
-    color: @mantle;
+    background-color: @red;
+    color: @sky;
   }
 }
 
@@ -172,7 +158,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: @mantle;
-  background: @lavender;
+  background: @peach;
 }
 
 #clock {
@@ -232,7 +218,7 @@ window#waybar.hidden {
   padding-right: 15px;
   border-radius: 10px;
   transition: none;
-  color: #d3506f;
+  color: @sky;
   background: @mantle;
 }
 

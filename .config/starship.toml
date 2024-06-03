@@ -25,7 +25,7 @@ disabled = true
 [directory]
 style = "bold fg:#ffffff bg:#8839ef"
 truncation_length = 3
-format = "[](#8839ef)[ $path]($style)[](#8839ef) "
+format = "[](#8839ef)[󰣇 $path]($style)[](#8839ef) "
 truncation_symbol = "…/"
 
 [git_branch]

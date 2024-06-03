@@ -119,7 +119,7 @@ alias gp="git pull"
 alias lg="lazygit"
 alias ca="conda activate"
 alias tc="typo_checker"
-alias aes="$HOME/miniconda3/envs/AES/bin/python $HOME/Projects/AES_256-Python/src/AES.py"
+alias aes="$HOME/.conda/envs/AES/bin/python $HOME/Projects/AES_256-Python/src/AES.py"
 alias nvi="nvitop -m full"
 alias sn="shutdown now"
 alias tc="typst c"
@@ -138,14 +138,14 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/gaetanserre/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/gaetanserre/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/gaetanserre/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/gaetanserre/miniconda3/bin:$PATH"
+        export PATH="/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

@@ -1,17 +1,16 @@
 {
   "layer": "top",
   "height": 45,
-  "margin-right": 7,
 
-  "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
+  "modules-left": ["custom/launcher", "cpu", "memory", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "clock", "battery"],
+  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "clock", "battery", "custom/power"],
 
   "pulseaudio": {
     "tooltip": false,
     "scroll-step": 5,
     "format": "{icon}  {volume}%",
-    "format-muted": "{icon}  Muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format-icons" : {
       "default": ["", "", ""]
     }
@@ -28,28 +27,10 @@
     "spacing": 10
   },
 
-  "backlight": {
-    "format": "{percent}% {icon}",
-    "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
-  },
-
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% 󱐌",
-    "format-plugged": "",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""],
-    "states": {
-      "warning": 30,
-      "critical": 15
-    }
-  },
-
   "clock": {
     "interval": 1,
     "timezone": "Europe/Paris",
-    "format": " {:%H:%M   %d/%m}"
+    "format": "  {:%H:%M    %d/%m}"
   },
 
   "cpu": {
@@ -66,18 +47,17 @@
 
   "custom/updates": {
     "format": "{} update(s)",
-    "exec": "~/.config/waybar/scripts/update.sh --get",
+    "exec": "paru -Quu | wc -l",
     "interval": 15,
-    "on-click": "kitty ~/.config/waybar/scripts/update.sh --update"
+    "on-click": "kitty -e paru && notify-send 'The system has been updated!'"
   },
 
   "custom/launcher": {
-    "format": "",
+    "format": "",
     "on-click": "wofi",
-    "on-click-right": "killall wofi",
-    "class": "memory"
+    "on-click-right": "killall wofi"
   },
-
+  
   "custom/weather": {
     "format": "{}°",
     "tooltip": true,
