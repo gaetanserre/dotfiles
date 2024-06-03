@@ -4,7 +4,7 @@
 
   "modules-left": ["custom/launcher", "cpu", "memory", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "clock", "battery", "custom/power"],
+  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "clock"],
 
   "pulseaudio": {
     "tooltip": false,

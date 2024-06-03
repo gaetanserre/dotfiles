@@ -164,6 +164,7 @@ window#waybar.hidden {
 #clock {
   margin-top: 6px;
   margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 3px;
   padding-left: 10px;
   padding-right: 10px;
@@ -215,7 +216,7 @@ window#waybar.hidden {
   margin-left: 8px;
   margin-bottom: 3px;
   padding-left: 10px;
-  padding-right: 15px;
+  padding-right: 17px;
   border-radius: 10px;
   transition: none;
   color: @sky;
