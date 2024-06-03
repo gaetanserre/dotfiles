@@ -10,8 +10,8 @@
   "pulseaudio": {
     "tooltip": false,
     "scroll-step": 5,
-    "format": "{icon} {volume}%",
-    "format-muted": "{icon} Muted",
+    "format": "{icon}  {volume}%",
+    "format-muted": "{icon}  Muted",
     "format-icons" : {
       "default": ["", "", ""]
     }
@@ -77,7 +77,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
-    "exec": "~/.config/waybar/scripts/wttrbar",
+    "exec": "~/.config/waybar/scripts/wttrbar --location Paris",
     "return-type": "json"
   }
 }
