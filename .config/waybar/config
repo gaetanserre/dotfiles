@@ -66,8 +66,9 @@
 
   "custom/updates": {
     "format": "{} update(s)",
-    "exec": "dnf check-update | grep updates | wc -l",
-    "interval": 15
+    "exec": "~/.config/waybar/scripts/update.sh --get",
+    "interval": 15,
+    "on-click": "kitty ~/.config/waybar/scripts/update.sh --update"
   },
 
   "custom/launcher": {
