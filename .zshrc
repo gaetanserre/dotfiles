@@ -145,7 +145,7 @@ else
     if [ -f "/home/gaetanserre/miniconda3/etc/profile.d/conda.sh" ]; then
         . "/home/gaetanserre/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/gaetanserre/miniconda3/bin:$PATH"
+        export PATH="$PATH:/home/gaetanserre/miniconda3/bin"
     fi
 fi
 unset __conda_setup
@@ -154,5 +154,7 @@ unset __conda_setup
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
 DISABLE_AUTO_TITLE="true"
+
+export PATH="/usr/bin:$PATH"
 
 eval "$(starship init zsh)"
