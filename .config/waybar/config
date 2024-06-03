@@ -3,9 +3,9 @@
   "height": 45,
   "margin-right": 7,
 
-  "modules-left": ["custom/launcher", "cpu", "memory", "disk", "tray"],
+  "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "backlight", "pulseaudio", "clock", "battery"],
+  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "clock", "battery"],
 
   "pulseaudio": {
     "tooltip": false,
@@ -71,5 +71,13 @@
     "on-click": "wofi",
     "on-click-right": "killall wofi",
     "class": "memory"
+  },
+
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "~/.config/waybar/scripts/wttrbar",
+    "return-type": "json"
   }
 }

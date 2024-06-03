@@ -162,7 +162,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: @mantle;
-  background: @peach;
+  background: @lavender;
 }
 
 #clock {
@@ -250,5 +250,17 @@ window#waybar.hidden {
   transition: none;
   color: @mantle;
   background: @pink;
+}
+
+#custom-weather {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @blue;
 }
 
