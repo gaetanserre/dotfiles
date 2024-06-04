@@ -11,7 +11,7 @@
     "tooltip": false,
     "scroll-step": 5,
     "format": "{icon}  {volume}%",
-    "format-muted": "{icon}  Muted",
+    "format-muted": "   Muted",
     "format-icons" : {
       "default": ["", "", ""]
     }
