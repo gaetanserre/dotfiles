@@ -127,7 +127,7 @@ window#waybar.hidden {
   padding-right: 13px;
   border-radius: 10px;
   transition: none;
-  color: @mantle;
+  color: @lavender;
   background: @mantle;
 }
 
