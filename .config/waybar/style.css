@@ -128,26 +128,26 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: @mantle;
-  background: @sky;
+  background: @mantle;
 }
 
 #battery.charging {
   color: @yellow;
-  background-color: @sky;
+  background-color: @mantle;
 }
 
 #battery.plugged {
-  color: @mantle;
-  background-color: @sky;
+  color: @green;
+  background-color: @mantle;
 }
 
 #battery.warning:not(.charging) {
-  background-color: @sky;
+  background-color: @mantle;
   color: @peach;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @sky;
+  background-color: @mantle;
   color: @red;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -158,7 +158,7 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: @sky;
+    background-color: @mantle;
     color: @mantle;
   }
 }
