@@ -36,6 +36,10 @@ setopt hist_ignore_dups
 setopt hist_save_no_dups
 setopt hist_find_no_dups
 
+# Set key bindings
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
 # Set key bindings for history search
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
