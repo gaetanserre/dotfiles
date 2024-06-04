@@ -9,8 +9,8 @@
   "pulseaudio": {
     "tooltip": false,
     "scroll-step": 5,
-    "format": "{icon}  {volume}%",
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format": "{icon}   {volume}%",
+    "format-muted": "   Muted",
     "format-icons" : {
       "default": ["", "", ""]
     }
