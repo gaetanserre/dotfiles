@@ -5,10 +5,11 @@ format = """
 $directory\
 $git_branch\
 $conda\
-$cmd_duration\
 $line_break\
 $shell\
 $character"""
+
+right_format = """$cmd_duration"""
 
 # Inserts a blank line between shell prompts
 add_newline = true
