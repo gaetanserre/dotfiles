@@ -4,16 +4,16 @@ get_nb_updates() {
   num_updates=$(($(dnf check-update | wc -l) - 2))
   num_updates=$(( $num_updates > 0 ? $num_updates : 0 ))
   if [ $num_updates -eq 0 ]; then
-    echo "Up to date"
+    echo "À jour"
   elif [ $num_updates -eq 1]; then
-    echo "$num_updates update"
+    echo "$num_updates mise à jour"
   else
-    echo "$num_updates updates"
+    echo "$num_updates mises à jour"
   fi
 }
 
 update() {
-  sudo dnf update && sudo dnf upgrade && notify-send 'The system has been updated!'
+  sudo dnf update && sudo dnf upgrade && notify-send 'Le système a été mis à jour !'
 }
 
 if [[ "$1" == "--get" ]]; then
