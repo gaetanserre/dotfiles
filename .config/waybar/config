@@ -14,7 +14,8 @@
     "format-muted": "   Muted",
     "format-icons" : {
       "default": ["", "", ""]
-    }
+    },
+    "on-click": "~/.config/hypr/scripts/volume.sh --mute"
   },
 
   "disk": {
