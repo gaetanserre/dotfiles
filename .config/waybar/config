@@ -13,7 +13,8 @@
     "format-muted": "   Muted",
     "format-icons" : {
       "default": ["", "", ""]
-    }
+    },
+    "on-click": "pamixer -t"
   },
 
   "disk": {
