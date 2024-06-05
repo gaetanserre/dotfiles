@@ -46,10 +46,10 @@
   },
 
   "custom/updates": {
-    "format": "{} update(s)",
-    "exec": "paru -Quu | wc -l",
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/update.sh --get",
     "interval": 15,
-    "on-click": "kitty -e paru && notify-send 'The system has been updated!'"
+    "on-click": "kitty ~/.config/waybar/scripts/update.sh --update"
   },
 
   "custom/launcher": {
