@@ -65,7 +65,7 @@
   },
 
   "custom/updates": {
-    "format": "{} update(s)",
+    "format": "{}",
     "exec": "~/.config/waybar/scripts/update.sh --get",
     "interval": 15,
     "on-click": "kitty ~/.config/waybar/scripts/update.sh --update"
