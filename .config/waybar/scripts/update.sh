@@ -5,7 +5,7 @@ get_nb_updates() {
   num_updates=$(( $num_updates > 0 ? $num_updates : 0 ))
   if [ $num_updates -eq 0 ]; then
     echo "À jour"
-  elif [ $num_updates -eq 1]; then
+  elif [ $num_updates -eq 1 ]; then
     echo "$num_updates mise à jour"
   else
     echo "$num_updates mises à jour"
