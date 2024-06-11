@@ -13,7 +13,7 @@ get_nb_updates() {
 }
 
 update() {
-  sudo dnf update && sudo dnf upgrade && notify-send 'Le système a été mis à jour !'
+  sudo dnf update --refresh && sudo dnf upgrade --refresh && notify-send 'Le système a été mis à jour !'
 }
 
 if [[ "$1" == "--get" ]]; then
