@@ -83,7 +83,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
-    "exec": "~/.config/waybar/scripts/wttrbar --location Gif-Sur-Yvette",
+    "exec": "~/.config/waybar/scripts/wttrbar",
     "return-type": "json"
   }
 }
