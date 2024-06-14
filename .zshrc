@@ -98,4 +98,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH=/home/gaetan/.local/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
