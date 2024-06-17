@@ -83,7 +83,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
-    "exec": "~/.config/waybar/scripts/wttrbar",
+    "exec": "~/.config/waybar/scripts/wttrbar --location Paris",
     "return-type": "json"
   }
 }
