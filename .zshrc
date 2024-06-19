@@ -60,8 +60,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 source <(fzf --zsh)
 
 # Aliases
+alias ls="ls --color"
 alias sc="source ~/.zshrc"
-alias ec="code ~/.zshrc"	
+alias ec="code ~/.zshrc"
 alias mf="make -j"
 alias cls="clear"
 alias gc="git clone"
@@ -85,17 +86,17 @@ alias po="poweroff"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/gaetan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/gaetan/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/gaetan/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/miniconda3/bin:$PATH"
+        export PATH="/home/gaetan/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH=/home/gaetan/.local/bin:$PATH
+export ELECTRON_OZONE_PLATFORM_HINT=auto
