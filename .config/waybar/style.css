@@ -274,3 +274,14 @@ window#waybar.hidden {
   background: @blue;
 }
 
+#custom-leanCal {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: @blue;
+}

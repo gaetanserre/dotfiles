@@ -5,7 +5,7 @@
 
   "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "clock", "battery"],
+  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "clock", "custom/leanCal", "battery"],
 
   "pulseaudio": {
     "tooltip": false,
@@ -84,6 +84,14 @@
     "tooltip": true,
     "interval": 3600,
     "exec": "~/.config/waybar/scripts/wttrbar --location Gif-Sur-Yvette",
+    "return-type": "json"
+  },
+
+  "custom/leanCal": {
+    "format": "🗓️ {}",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "leancal -w",
     "return-type": "json"
   }
 }
