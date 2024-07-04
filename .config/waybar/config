@@ -5,7 +5,7 @@
 
   "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "clock", "custom/leanCal", "battery"],
+  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "custom/leanCal", "battery"],
 
   "pulseaudio": {
     "tooltip": false,
@@ -47,12 +47,6 @@
     }
   },
 
-  "clock": {
-    "interval": 1,
-    "timezone": "Europe/Paris",
-    "format": " {:%H:%M   %d/%m}"
-  },
-
   "cpu": {
     "interval": 15,
     "format": "  {}%",
@@ -88,10 +82,10 @@
   },
 
   "custom/leanCal": {
-    "format": "🗓️ {}",
+    "format": "{}",
     "tooltip": true,
     "interval": 60,
-    "exec": "leancal -w",
+    "exec": "leancal -w -co",
     "return-type": "json"
   }
 }

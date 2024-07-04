@@ -283,5 +283,5 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: @mantle;
-  background: @blue;
+  background: #826bcd;
 }
