@@ -8,7 +8,19 @@ sink_list=$(echo $grep_output | tr -d '"')
 # to array
 IFS=' ' read -r -a sink_array <<< "$sink_list"
 
+check_if_mute() {
+  mute_status=$(pamixer --get-mute)
+  if [[ "$mute_status" == "true" ]]; then
+    true
+  else
+    false
+  fi
+}
+
 inc_volume() {
+  if check_if_mute; then
+    pamixer -u
+  fi
   for sink in "${sink_array[@]}"
   do
     pamixer --sink $sink -i 2
@@ -16,6 +28,9 @@ inc_volume() {
 }
 
 dec_volume() {
+  if check_if_mute; then
+    pamixer -u
+  fi
   for sink in "${sink_array[@]}"
   do
     pamixer --sink $sink -d 2
