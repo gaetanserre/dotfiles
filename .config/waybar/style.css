@@ -261,3 +261,15 @@ window#waybar.hidden {
   background: @blue;
 }
 
+#custom-LeanCal {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @mantle;
+  background: #826bcd;
+}

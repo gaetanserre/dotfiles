@@ -83,6 +83,7 @@ alias borelli="cd $HOME/Borelli"
 alias pipi="pip install"
 alias ytmusic="xattr -d com.apple.quarantine /Applications/YouTube\ Music.app"
 alias po="poweroff"
+alias events="code ~/.LeanCal/events.txt"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

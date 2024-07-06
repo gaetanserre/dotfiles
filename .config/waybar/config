@@ -4,7 +4,7 @@
 
   "modules-left": ["custom/launcher", "cpu", "memory", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "clock"],
+  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "custom/LeanCal"],
 
   "pulseaudio": {
     "tooltip": false,
@@ -26,12 +26,6 @@
   "tray": {
     "icon-size": 18,
     "spacing": 10
-  },
-
-  "clock": {
-    "interval": 1,
-    "timezone": "Europe/Paris",
-    "format": "  {:%H:%M    %d/%m}"
   },
 
   "cpu": {
@@ -64,6 +58,13 @@
     "tooltip": true,
     "interval": 3600,
     "exec": "~/.config/waybar/scripts/wttrbar --location Gif-Sur-Yvette",
+    "return-type": "json"
+  },
+  "custom/LeanCal": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 60,
+    "exec": "leancal -w -co",
     "return-type": "json"
   }
 }
