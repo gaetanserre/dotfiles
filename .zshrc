@@ -99,4 +99,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export ELECTRON_OZONE_PLATFORM_HINT=auto
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
