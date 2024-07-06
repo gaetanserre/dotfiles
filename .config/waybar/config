@@ -5,7 +5,7 @@
 
   "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "custom/leanCal", "battery"],
+  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "custom/LeanCal", "battery"],
 
   "pulseaudio": {
     "tooltip": false,
@@ -81,7 +81,7 @@
     "return-type": "json"
   },
 
-  "custom/leanCal": {
+  "custom/LeanCal": {
     "format": "{}",
     "tooltip": true,
     "interval": 60,
