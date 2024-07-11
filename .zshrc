@@ -84,19 +84,4 @@ alias ytmusic="xattr -d com.apple.quarantine /Applications/YouTube\ Music.app"
 alias po="poweroff"
 alias events="code ~/.LeanCal/events.txt"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/gaetanserre/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/gaetanserre/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/gaetanserre/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$PATH:/home/gaetanserre/miniconda3/bin"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:$HOME/.local/lib
