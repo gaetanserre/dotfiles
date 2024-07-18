@@ -85,3 +85,4 @@ alias po="poweroff"
 alias events="code ~/.LeanCal/events.txt"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:$HOME/.local/lib
+export PATH=$PATH:$HOME/.local/bin
