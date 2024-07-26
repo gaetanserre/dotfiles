@@ -1,0 +1,7 @@
+[user]
+	email = gaetan.serre@ens-paris-saclay.fr
+	name = Gaëtan Serré
+[pull]
+	rebase = true
+[credential]
+	helper = store
