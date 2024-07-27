@@ -5,7 +5,7 @@
 
   "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "custom/LeanCal", "battery"],
+  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "custom/LeanCal"],
 
   "pulseaudio": {
     "tooltip": false,
@@ -67,7 +67,7 @@
   },
 
   "custom/launcher": {
-    "format": "",
+    "format": "󰍘",
     "on-click": "wofi",
     "on-click-right": "killall wofi",
     "class": "memory"
