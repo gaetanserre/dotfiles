@@ -2,6 +2,7 @@
 
 nb_monitors=$(hyprctl monitors | grep 'Monitor' | wc -l)
 laptop_screen_available=$(hyprctl monitors | grep 'eDP' | wc -l)
+is_plugged=$(cat /sys/class/power_supply/macsmc-ac/online)
 
 backlight() {
   if [[ $nb_monitors == 1 && ($laptop_screen_available == 1)]]; then
@@ -21,7 +22,9 @@ suspend_laptop() {
   fi
 }
 
-if [[ "$1" == "--backlight" ]]; then
+if [[ $is_plugged == 1 ]]; then
+  exit 0
+elif [[ "$1" == "--backlight" ]]; then
   backlight
 elif [[ "$1" == "--screen" ]]; then
   screen_off
