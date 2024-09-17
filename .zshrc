@@ -83,6 +83,7 @@ alias pipi="pip install"
 alias ytmusic="xattr -d com.apple.quarantine /Applications/YouTube\ Music.app"
 alias po="poweroff"
 alias events="code ~/.LeanCal/events.txt"
+alias hypr="code ~/dotfiles/.config/hypr/hyprland.conf"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:$HOME/.local/lib
 export PATH=$PATH:$HOME/.local/bin
