@@ -116,7 +116,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: @mantle;
-  background: @yellow;
+  background: @rosewater;
 }
 
 #battery {
@@ -219,8 +219,8 @@ window#waybar.hidden {
   padding-right: 10px;
   border-radius: 10px;
   transition: none;
-  color: @sky;
-  background: @mantle;
+  color: @mantle;
+  background: @rosewater;
 }
 
 #custom-launcher {

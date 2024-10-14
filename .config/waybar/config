@@ -3,8 +3,7 @@
   "height": 45,
   "margin-right": 7,
 
-  "modules-left": ["custom/launcher", "cpu", "disk", "tray"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-left": ["custom/launcher", "cpu", "disk", "tray", "hyprland/workspaces"],
   "modules-right": ["custom/updates", "custom/weather", "backlight", "pulseaudio", "custom/LeanCal", "battery"],
 
   "pulseaudio": {
